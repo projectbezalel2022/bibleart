@@ -1,0 +1,13 @@
+name: Build bibleart nextjs app
+on: push
+jobs:
+  build-project:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Install npm dependencies
+      run: npm install
+    - name: Build project assets
+      run: npm run build
