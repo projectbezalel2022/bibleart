@@ -1,2 +1,2 @@
 ## about
-Representing bible in visual art format
+Representing bible in visual art format.
