@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
         <div className={styles.header}></div>
       Noah’s ark finally rested after floods.
-        <Image src={'/images/tumblr_oj6cljvYni1ubfd0zo1_1280.jpeg'} width={350} height={350}/>
+        <Image src={'/images/tumblr_oj6cljvYni1ubfd0zo1_1280.jpeg'} alt={"Black-and-white art depicting Noah's ark on a mountain"} width={350} height={350}/>
     </div>
   )
 }
