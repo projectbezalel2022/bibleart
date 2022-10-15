@@ -1,9 +1,19 @@
 name: azure-webapp-projectbezalel-build
-on: push
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
 env:
   AZURE_WEBAPP_NAME: projectbezalel
   AZURE_WEBAPP_PACKAGE_PATH: '.next/'
   NODE_VERSION: '18.x'
+
 jobs:
   build-project:
     name: Build Project
