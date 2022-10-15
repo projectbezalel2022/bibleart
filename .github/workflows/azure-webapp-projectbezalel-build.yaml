@@ -16,7 +16,7 @@ on:
 # Environment Variables
 env:
   AZURE_WEBAPP_NAME: projectbezalel
-  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  AZURE_WEBAPP_PACKAGE_PATH: '.next'
   NODE_VERSION: '18.x'
 
 jobs:
