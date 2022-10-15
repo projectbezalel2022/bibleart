@@ -1,0 +1,25 @@
+.chapterBox{
+    height: 60px;
+    width: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chapterText{
+    color: black;
+    font-size: medium;
+}
+
+.listGrid{
+    background-color: #F5F5F5;
+    width: 100vw;
+    padding: 16vh 8vw 8vw 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}

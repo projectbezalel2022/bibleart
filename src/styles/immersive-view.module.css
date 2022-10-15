@@ -1,14 +1,14 @@
-.main-section{
+.mainSection{
     width: 100vw;
     min-height: 100vh;
 }
 
-.verses-image{
+.versesImage{
     width: 100vw;
     height: auto;
 }
 
-.text-container{
+.textContainer{
     width: 80vw;
     padding: 10vw, 10vw;
     display: flex;
@@ -17,7 +17,7 @@
     gap: 20px;
 }
 
-.one-verse{
+.oneVerse{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,10 +25,10 @@
     gap: 10px;
 }
 
-.verse-number-label{
+.verseNumberLabel{
     color: black;
 }
 
-.verse-text{
+.verseText{
     color: black;
 }
