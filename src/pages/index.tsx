@@ -13,11 +13,11 @@ const Home: NextPage = ({bookData}: any) => {
     <div className={styles.container}>
         <div className={styles.insideContainer}>
         <Header bookName={'Genesis'}/>
-            {bookData.map(({verses, image}: any, i: any) => {
+            {/*{bookData.map(({verses, image}: any, i: any) => {
                 return (
                     <ViewCard key={i} verses={verses} image={image} chapter={String(i+1)}/>
                 )
-            })}
+            })}*/}
         <BookLink book={'Genesis'} chapters={50}/>
         </div>
     </div>
