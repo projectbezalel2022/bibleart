@@ -1,5 +1,6 @@
 name: azure-webapp-projectbezalel-build
 
+# Only trigger when there is a push on main branch.
 on:
   push:
     branches:
@@ -9,6 +10,7 @@ on:
     branches:
       - main
 
+# Environment Variables
 env:
   AZURE_WEBAPP_NAME: projectbezalel
   AZURE_WEBAPP_PACKAGE_PATH: '.next/'
