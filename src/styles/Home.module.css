@@ -6,3 +6,25 @@
     justify-content: space-between;
 }
 
+.back {
+    position: absolute;
+    z-index: 100;
+    margin: 20px;
+}
+
+.wrapper {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.singleVerse {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.singleVerse:first-child {
+    margin-top: 0;
+}

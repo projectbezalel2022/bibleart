@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const ViewCard = ({verses, image, chapter}: {verses: any[], image: string, chapter: any}) => {
     return (
-        <Link href={`/books/${chapter}`}>
+        <Link href={`/books/image/${chapter}`}>
             <a className={styles.container}>
                 <div className={styles.verses}>
                     {verses.map((verse, i) => {
