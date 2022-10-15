@@ -1,45 +1,45 @@
-# name: azure-webapp-projectbezalel-build
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
 
-# # Only trigger when there is a push on main branch.
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     types: [opened, synchronize, reopened, closed]
-#     branches:
-#       - main
+name: azure-webapp-projectbezalel-build
 
-# # Environment Variables
-# env:
-#   AZURE_WEBAPP_NAME: projectbezalel
-#   AZURE_WEBAPP_PACKAGE_PATH: '.next/'
-#   NODE_VERSION: '18.x'
+# Only trigger when there is a push on main branch.
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
 
-# jobs:
-#   build-project:
-#     name: Build Project
-#     runs-on: ubuntu-latest
-#     steps:
-#     # Checkout code
-#     - name: Checkout code
-#       uses: actions/checkout@v3
-#     # Install npm dependencies
-#     - name: Install npm dependencies
-#       run: npm install
-#     # Run npm build
-#     - name: Build project assets
-#       run: npm run build
-#     # Upload artifact
-#     - name: Upload artifact
-#       uses: actions/upload-artifact@v3
-#       with:
-#         name: bibleart
-#         path: .next/
-#     # Deploy to Azure WebApp
-#     - name: 'Deploy to Azure WebApp'
-#       uses: azure/webapps-deploy@v2
-#       with:
-#         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-#         publish-profile: ${{ secrets.PROJECT_BEZALEL_WEB_APP_PUBLISHING_PROFILE }}
-#         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+# Environment Variables
+env:
+  AZURE_WEBAPP_NAME: projectbezalel
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  NODE_VERSION: '18.x'
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Use Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: npm install, build, and test
+      run: |
+        # Build and test the project, then
+        # deploy to Azure Web App.
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+      working-directory: my-app-path
+    - name: 'Deploy to Azure WebApp'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.PROJECT_BEZALEL_WEB_APP_PUBLISHING_PROFILE }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
