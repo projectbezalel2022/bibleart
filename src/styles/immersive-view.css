@@ -1,0 +1,34 @@
+.main-section{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.verses-image{
+    width: 100vw;
+    height: auto;
+}
+
+.text-container{
+    width: 80vw;
+    padding: 10vw, 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.one-verse{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.verse-number-label{
+    color: black;
+}
+
+.verse-text{
+    color: black;
+}

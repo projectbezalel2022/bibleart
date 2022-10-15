@@ -10,7 +10,7 @@ const Home: NextPage = ({bookData}: any) => {
   return (
     <div className={styles.container}>
         <Header bookName={'Genesis 1'}/>
-        {/*<Image src={'/images/tumblr_oj6cljvYni1ubfd0zo1_1280.jpeg'} width={350} height={350}/>*/}
+        {/*<Image src={'/images/tumblr_oj6cljvYni1ubfd0zo1_1280.jpeg'} alt={"Black-and-white art depicting Noah's ark on a mountain"} width={350} height={350}/>*/}
     </div>
   )
 }
