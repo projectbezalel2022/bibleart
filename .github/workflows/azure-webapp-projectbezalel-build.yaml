@@ -1,33 +1,33 @@
-# name: azure-webapp-projectbezalel-build
-# on: push
-# env:
-#   AZURE_WEBAPP_NAME: projectbezalel
-#   AZURE_WEBAPP_PACKAGE_PATH: '.next/'
-#   NODE_VERSION: '16.x'
-# jobs:
-#   build-project:
-#     name: Build Project
-#     runs-on: ubuntu-latest
-#     steps:
-#     # Checkout code
-#     - name: Checkout code
-#       uses: actions/checkout@v3
-#     # Install npm dependencies
-#     - name: Install npm dependencies
-#       run: npm install
-#     # Run npm build
-#     - name: Build project assets
-#       run: npm run build
-#     # # Upload artifact
-#     # - name: Upload artifact
-#     #   uses: actions/upload-artifact@v3
-#     #   with:
-#     #     name: bibleart
-#     #     path: .next/
-#     # Deploy to Azure WebApp
-#     - name: 'Deploy to Azure WebApp'
-#       uses: azure/webapps-deploy@v2
-#       with:
-#         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-#         publish-profile: ${{ secrets.PROJECT_BEZALEL_WEB_APP_PUBLISHING_PROFILE }}
-#         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+name: azure-webapp-projectbezalel-build
+on: push
+env:
+  AZURE_WEBAPP_NAME: projectbezalel
+  AZURE_WEBAPP_PACKAGE_PATH: '.next/'
+  NODE_VERSION: '18.x'
+jobs:
+  build-project:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v3
+    # Install npm dependencies
+    - name: Install npm dependencies
+      run: npm install
+    # Run npm build
+    - name: Build project assets
+      run: npm run build
+    # Upload artifact
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: bibleart
+        path: .next/
+    # Deploy to Azure WebApp
+    - name: 'Deploy to Azure WebApp'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.PROJECT_BEZALEL_WEB_APP_PUBLISHING_PROFILE }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

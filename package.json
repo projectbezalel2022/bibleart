@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "postinstall": "next build"
+    "build": "next build && next export",
+    "start": "next start --port 80",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^12.3.1",
