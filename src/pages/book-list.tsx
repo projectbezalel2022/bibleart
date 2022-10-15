@@ -1,4 +1,4 @@
-import BookLinkList from "../Components/book-link-list";
+import BookLinkList from "../components/book-link-list";
 
 function BookList() {
     const torahBooks: String[] = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy'];
