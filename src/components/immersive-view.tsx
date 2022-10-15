@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import '../styles/immersive-view.css';
 
 type propsType = {
     verses: {verseNumber: number, verseText: String}[]
@@ -6,13 +7,13 @@ type propsType = {
 }
 
 export default function ImmersiveView({verses, image}: propsType) {
-    return (<section>
-        <Image src={image} alt='A larger image to immerse oneself in the bible verses'/>
-        <div>
+    return (<section className='main-section'>
+        <Image className='verses-image' src={image} alt='A larger image to immerse oneself in the bible verses'/>
+        <div className='text-container'>
             {verses.map((verse: {verseNumber: number, verseText: String}, index: number) => {
-                return (<div key={index}>
-                    <p>{String(verse.verseNumber)}</p>
-                    <p>{verse.verseText}</p>
+                return (<div className='one-verse' key={index}>
+                    <p className='verse-number-label'>{String(verse.verseNumber)}</p>
+                    <p className='verse-text'>{verse.verseText}</p>
                 </div>)
             })}
             
