@@ -10,12 +10,24 @@
     position: absolute;
     z-index: 100;
     margin: 20px;
+    width: 25px;
+    height: 25px;
+
+    border-radius: 4px;
+    background: rgba(183, 183, 183, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper {
     margin: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.num {
+    color: rgba(183, 183, 183, 1);
 }
 
 .singleVerse {

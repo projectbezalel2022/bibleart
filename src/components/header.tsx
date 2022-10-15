@@ -2,6 +2,11 @@ import styles from './header.module.css'
 import {BurgerIcon} from "./icons/burgerIcon";
 import {useEffect, useState} from "react";
 import {BackIcon} from "./icons/backIcon";
+import Link from "next/link";
+
+const navData = [
+    '1', '2', '3'
+]
 
 export const Header = ({bookName}: {bookName: string}) => {
     const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -23,7 +28,18 @@ export const Header = ({bookName}: {bookName: string}) => {
                         <BackIcon/>
                     </button>
                     Browse
-                    <div className={styles.emptyBlock}/>
+                    <Link href={`/`}>
+                        <a>Home</a>
+                    </Link>
+                </div>
+                <div className={styles.menuList}>
+                    {navData.map((navItem, i) => {
+                        return (<Link key={i} href={`/books/${navItem}`}>
+                            <a onClick={() => setTimeout(() => setIsMenuOpened(false), 300)}>
+                                <div key={i}>{navItem}</div>
+                            </a>
+                        </Link>)
+                    })}
                 </div>
             </div>
             {bookName}
