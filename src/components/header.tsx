@@ -2,7 +2,6 @@ import styles from './header.module.css'
 import {BurgerIcon} from "./icons/burgerIcon";
 import {useEffect, useState} from "react";
 import {BackIcon} from "./icons/backIcon";
-import BookLink from './book-link';
 
 export const Header = ({bookName}: {bookName: string}) => {
     const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -14,7 +13,6 @@ export const Header = ({bookName}: {bookName: string}) => {
     }, [isMenuOpened])
 
     return (
-        <div className={styles.outsideContainer}>
         <div className={styles.container}>
             <button onClick={() => setIsMenuOpened(!isMenuOpened)} className={styles.button}>
                 <BurgerIcon/>
@@ -31,8 +29,5 @@ export const Header = ({bookName}: {bookName: string}) => {
             {bookName}
             <div className={styles.emptyBlock}/>
         </div>
-        <BookLink book={'Genesis'} chapters={50}/>
-        </div>
-
     )
 }
