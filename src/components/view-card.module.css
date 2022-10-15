@@ -1,0 +1,36 @@
+.container {
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex: 1 1;
+    margin: 20px 10px;
+}
+
+.image {
+    width: 80px;
+    min-width: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 120px;
+}
+
+.verses {
+    font-family: Roboto, sans-serif;
+    margin-right: 5px;
+}
+
+.singleVerse {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.singleVerse:first-child {
+    margin-top: 0;
+}
+
+.num {
+    color: rgba(183, 183, 183, 1);
+}
