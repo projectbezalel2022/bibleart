@@ -2,7 +2,8 @@ name: Build bibleart nextjs app
 on: push
 env:
   AZURE_WEBAPP_NAME: projectbezalel
-  AZURE_WEBAPP_PACKAGE_PATH: '.next/'
+  # AZURE_WEBAPP_PACKAGE_PATH: '.next/'
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
   NODE_VERSION: '16.x'
 jobs:
   build-project:
@@ -18,12 +19,12 @@ jobs:
     # Run npm build
     - name: Build project assets
       run: npm run build
-    # Upload artifact
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: bibleart
-        path: .next/
+    # # Upload artifact
+    # - name: Upload artifact
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: bibleart
+    #     path: .next/
     # Deploy to Azure WebApp
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
