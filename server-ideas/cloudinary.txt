@@ -1,0 +1,8 @@
+// Cloudinary is a way of storing images for free
+
+>> npm install cloudinary
+// Upload an image
+cloudinary.v2.uploader.upload("../public/images/Genesis1_V01.jpg",
+  { public_id: "Genesis_1_verse_1" }, 
+  function(error, result) {console.log(result); });
+

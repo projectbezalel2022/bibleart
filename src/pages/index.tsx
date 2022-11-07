@@ -39,6 +39,7 @@ export default Home
                 return (
                     <ViewCard key={i} verses={verses} image={image} chapter={String(i+1)}/>
                 )
-            })}*/}
-        <BookLink book={'Genesis'} chapters={50}/>
-*/
+            })}*/
+            //}
+        //<BookLink book={'Genesis'} chapters={50}/>
+//*/
