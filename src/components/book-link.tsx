@@ -12,13 +12,13 @@ type propsType = {
 // for now, the book is always Genesis
 
 export default function BookLink({book, chapters}: propsType) {
-    
+
     let fullChaptersArray: number[] = [];
     for (let i=0; i<chapters; i++) {
         fullChaptersArray.push(i+1);
     }
     const chaptersShown = fullChaptersArray;
-    
+
     return (
         <section className={styles.listGrid}>
             {chaptersShown.map((chapter, index) => {
@@ -26,7 +26,7 @@ export default function BookLink({book, chapters}: propsType) {
                 //console.log(linkRef);
                 return (<ChapterLink key={index} linkRef={linkRef} chapter={chapter}/>)
             })}
-        </section> 
+        </section>
       )
 }
 
@@ -42,6 +42,6 @@ export default function BookLink({book, chapters}: propsType) {
             setBookIsSelected('visible');
             setChaptersShown(fullChaptersArray);
         }
-        
+
         console.log('Book selected');
     }*/

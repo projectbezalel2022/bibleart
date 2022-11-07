@@ -11,10 +11,13 @@
     width: 80px;
     min-width: 80px;
     border-radius: 10px;
+    overflow: hidden;
+    height: 120px;
 }
 
 .verses {
     font-family: Roboto, sans-serif;
+    margin-right: 5px;
 }
 
 .singleVerse {
