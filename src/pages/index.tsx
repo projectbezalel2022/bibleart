@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import {ViewCard} from "../components/view-card";
 import {Header} from "../components/header";
 import {bookData} from "../bookData";
-import BookLink from '../components/book-link';
+//import BookLink from '../components/book-link';
 
 const Home: NextPage = ({bookData}: any) => {
     console.log(bookData)
